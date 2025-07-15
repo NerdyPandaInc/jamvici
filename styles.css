@@ -48,9 +48,10 @@ body {
 /* ========================= */
 .image-slideshow {
   position: relative;
-  margin-top: 100px; /* keeps below navbar */
+  margin-top: 100px; /* offset for fixed navbar */
   width: 100%;
-  aspect-ratio: 16 / 9; /* ensures proportional scaling */
+  height: auto;
+  max-height: 600px;
   overflow: hidden;
   z-index: 0;
 }
@@ -59,8 +60,9 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* shows full image without cropping */
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
   opacity: 0;
   transition: opacity 2s ease-in-out;
 }
@@ -80,7 +82,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4em 1em;
+  padding: 6em 1em 2em;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 2;
 }
@@ -160,12 +162,17 @@ footer {
   font-size: 0.9em;
   margin-top: 2em;
 }
+
+/* ========================= */
+/*   SECTION LAYOUT + GRID  */
+/* ========================= */
 .main-showcase {
   display: flex;
   flex-wrap: wrap;
   gap: 3em;
-  padding: 2em;
+  padding: 3em 2em;
   align-items: flex-start;
+  margin-top: 2em;
 }
 
 .hero, .featured {
@@ -177,10 +184,4 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  justify-content: center;
-}
-
-.item {
-  width: 100%;
-  max-width: 200px;
-}
+  justify-content
