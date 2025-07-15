@@ -144,3 +144,26 @@ body {
     background-color: rgba(120, 60, 160, 0.2);
   }
 }
+.image-slideshow {
+  position: relative;
+  top: 100px; /* adjust to match header height */
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
