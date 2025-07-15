@@ -1,41 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Threads & Stride</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Threads & Stride</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section class="hero">
-    <h2>Fresh Fits for Bold Steps</h2>
-    <button>Browse New Arrivals</button>
-  </section>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
 
-  <section class="shop-preview">
-    <h3>Shop Collection</h3>
-    <div class="grid">
-      <div class="item">T-shirt</div>
-      <div class="item">Jacket</div>
-      <div class="item">Jeans</div>
-    </div>
-  </section>
+header {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-  <footer>
-    <p>&copy; 2025 Threads & Stride</p>
-  </footer>
-</body>
-</html>
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.shop-preview {
+  padding: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.item {
+  background-color: white;
+  padding: 20px;
+  width: 150px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  border-color: #000;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
