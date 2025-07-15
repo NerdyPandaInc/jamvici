@@ -61,7 +61,7 @@ body {
   background-size: contain; /* Scales image proportionally */
   background-repeat: no-repeat;
   background-position: top center;
-  animation: zoomFade 120s infinite;
+  animation: zoomFade 70s infinite;
   z-index: 0;
 }
 
