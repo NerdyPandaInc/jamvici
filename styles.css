@@ -4,21 +4,25 @@ body {
   background-color: #f8f8f8;
   color: #333;
 }
+
 .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
-  position: absolute;
-  width: 100%;
-  top: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  background-color: rgba(255, 255, 255, 0.1); /* translucent white */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 10;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5em;
+.logo-img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
@@ -82,15 +86,3 @@ footer {
   background-color: #eee;
   font-size: 0.9em;
 }
-.logo-img {
-  height: 50px;
-  width: auto;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #111;
-}
-
