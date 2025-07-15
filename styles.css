@@ -120,3 +120,78 @@ footer {
   10%, 45% { opacity: 1; }
   55%, 90% { opacity: 0; }
 }
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: zoomFade 32s infinite;
+  z-index: 0;
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2em;
+  border-radius: 10px;
+}
+@keyframes zoomFade {
+  0% {
+    background-image: url('assets/images/image1.png');
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    background-image: url('assets/images/image1.png');
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  25% {
+    background-image: url('assets/images/image2.png');
+    transform: scale(1);
+    opacity: 1;
+  }
+  45% {
+    background-image: url('assets/images/image2.png');
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  50% {
+    background-image: url('assets/images/daughterFather.png');
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    background-image: url('assets/images/daughterFather.png');
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  75% {
+    background-image: url('assets/images/youngMan.png');
+    transform: scale(1);
+    opacity: 1;
+  }
+  95% {
+    background-image: url('assets/images/youngMan.png');
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    background-image: url('assets/images/image1.png');
+    transform: scale(1);
+    opacity: 1;
+  }
+}
