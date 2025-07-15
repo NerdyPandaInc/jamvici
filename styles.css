@@ -1,85 +1,82 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f5f5f5;
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f8f8f8;
   color: #333;
 }
 
-header {
-  background-color: #111;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
-nav ul {
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 1.5em;
 }
 
-nav a {
-  color: white;
+.nav-links a {
   text-decoration: none;
-  font-weight: bold;
+  color: #333;
+  font-weight: 500;
 }
 
 .hero {
-  background: url('assets/hero.jpg') center/cover no-repeat;
-  padding: 60px;
-  text-align: center;
-  color: white;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.shop-preview {
-  padding: 40px;
-  text-align: center;
-}
-
-.grid {
+  background: url('hero-image.jpg') center/cover no-repeat;
+  height: 80vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  text-align: center;
 }
 
-.item {
-  background-color: white;
-  padding: 20px;
-  width: 150px;
-  border: 1px solid #ccc;
-  transition: 0.3s ease;
+.hero-text {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2em;
+  border-radius: 10px;
 }
 
-.item:hover {
-  transform: scale(1.05);
-  border-color: #000;
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.featured {
+  padding: 2em;
+  background-color: #fff;
+}
+
+.collection-grid {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.item img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
 }
 
 footer {
-  background-color: #111;
-  color: white;
-  padding: 20px;
   text-align: center;
+  padding: 1em;
+  background-color: #eee;
+  font-size: 0.9em;
 }
