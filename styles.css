@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ========================= */
+/*     GLOBAL STYLES        */
+/* ========================= */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -6,7 +8,9 @@ body {
   color: #333;
 }
 
-/* Navbar */
+/* ========================= */
+/*        NAVBAR            */
+/* ========================= */
 .navbar {
   position: absolute;
   top: 0;
@@ -16,7 +20,7 @@ body {
   align-items: center;
   padding: 20px;
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  -webkit-backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 10;
@@ -39,14 +43,43 @@ body {
   font-weight: 500;
 }
 
-/* Hero Section */
+/* ========================= */
+/*    IMAGE SLIDESHOW       */
+/* ========================= */
+.image-slideshow {
+  position: relative;
+  top: 100px; /* matches navbar height */
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ========================= */
+/*        HERO AREA         */
+/* ========================= */
 .hero {
   position: relative;
   height: 80vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -71,8 +104,6 @@ body {
 .hero-visual {
   flex: 1;
   position: relative;
-  animation: imageFade 32s infinite;
-  z-index: 1;
 }
 
 .hero-visual::before {
@@ -83,21 +114,23 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
+  animation: imageFade 60s infinite;
   transition: background-image 1s ease;
 }
 
-/* Color layer that fades to match image palette */
 .hero-visual::after {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  animation: tintCycle 32s infinite;
+  animation: tintCycle 60s infinite;
   z-index: -1;
 }
 
-/* CTA button */
+/* ========================= */
+/*         CTA BUTTON       */
+/* ========================= */
 .cta-button {
   margin-top: 1em;
   padding: 0.8em 1.5em;
@@ -107,7 +140,9 @@ body {
   border-radius: 5px;
 }
 
-/* Image Background Rotation */
+/* ========================= */
+/*       KEYFRAME LOOPS     */
+/* ========================= */
 @keyframes imageFade {
   0%, 20% {
     background-image: url('assets/images/image1.png');
@@ -126,44 +161,20 @@ body {
   }
 }
 
-/* Color Tint Transition (matched per image tone) */
 @keyframes tintCycle {
   0%, 20% {
-    background-color: rgba(120, 60, 160, 0.2); /* purple tone */
+    background-color: rgba(120, 60, 160, 0.2); /* purple */
   }
   25%, 45% {
-    background-color: rgba(240, 180, 60, 0.2); /* autumn tone */
+    background-color: rgba(240, 180, 60, 0.2); /* autumn gold */
   }
   50%, 70% {
-    background-color: rgba(180, 220, 255, 0.2); /* winter blue */
+    background-color: rgba(180, 220, 255, 0.2); /* icy blue */
   }
   75%, 95% {
-    background-color: rgba(100, 100, 100, 0.2); /* urban grayscale */
+    background-color: rgba(100, 100, 100, 0.2); /* grayscale */
   }
   100% {
     background-color: rgba(120, 60, 160, 0.2);
   }
-}
-.image-slideshow {
-  position: relative;
-  top: 100px; /* adjust to match header height */
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.slide {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 2;
 }
