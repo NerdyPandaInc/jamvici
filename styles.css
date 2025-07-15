@@ -160,3 +160,27 @@ footer {
   font-size: 0.9em;
   margin-top: 2em;
 }
+.main-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 2em;
+  align-items: flex-start;
+}
+
+.hero, .featured {
+  flex: 1;
+  min-width: 300px;
+}
+
+.collection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.item {
+  width: 100%;
+  max-width: 200px;
+}
