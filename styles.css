@@ -63,7 +63,7 @@ body {
   z-index: 1;
 }
 
-/* Hero Area */
+/* Hero Section */
 .hero {
   padding: 6em 1em 2em;
   background-color: rgba(255, 255, 255, 0.95);
@@ -117,18 +117,86 @@ footer {
   font-size: 0.9em;
   margin-top: 2em;
 }
+
+/* Page Layout */
 .page-container {
   display: flex;
+  min-height: 100vh;
+  margin-top: 100px; /* adjust for fixed navbar */
 }
 
+/* Sidebar Filter Styling */
 .product-sidebar {
-  width: 250px;
-  padding: 1.5em;
+  width: 260px;
+  padding: 2em 1.5em;
   background-color: #f4f4f4;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03);
 }
 
+.product-sidebar h3 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.product-sidebar form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-sidebar label {
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  font-weight: 500;
+  color: #444;
+}
+
+.product-sidebar select,
+.product-sidebar input[type="number"],
+.product-sidebar input[type="range"] {
+  padding: 0.5em;
+  font-size: 0.95em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 0.6em;
+}
+
+.product-sidebar input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+.product-sidebar button {
+  margin-top: 1.5em;
+  padding: 0.8em;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-sidebar button:hover {
+  background-color: #444;
+}
+
+/* Main Content Area */
 .product-content {
   flex: 1;
-  padding: 2em;
+  padding: 2em 3em;
+}
+
+.product-content h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #222;
+}
+
+.product-listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
 }
