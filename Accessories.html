@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Arrivals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- Sidebar -->
+    <aside class="product-sidebar">
+      <h3>Filter Options</h3>
+      <form>
+        <label for="size">Size:</label>
+        <select id="size">
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+
+        <label for="price">Price Range:</label>
+        <input type="range" id="price" min="10" max="500" />
+
+        <label><input type="checkbox" /> Sale Only</label>
+        <label><input type="checkbox" /> New Releases</label>
+        <button type="submit">Apply Filters</button>
+      </form>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="product-content">
+      <h1>New Arrivals</h1>
+      <!-- Products will be listed here -->
+    </main>
+  </div>
+
+</body>
+</html>
