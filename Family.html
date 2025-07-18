@@ -9,12 +9,24 @@
 <body>
 
   <div class="page-container">
+    
     <!-- Sidebar -->
     <aside class="product-sidebar">
-      <h3>Filter Options</h3>
+      <h3>Filter by</h3>
       <form>
-        <label for="size">Size:</label>
-        <select id="size">
+        <!-- Category -->
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option>All</option>
+          <option>Jackets</option>
+          <option>Dresses</option>
+          <option>T-Shirts</option>
+          <option>Accessories</option>
+        </select>
+
+        <!-- Size -->
+        <label for="size">Size</label>
+        <select id="size" name="size">
           <option>XS</option>
           <option>S</option>
           <option>M</option>
@@ -22,11 +34,25 @@
           <option>XL</option>
         </select>
 
-        <label for="price">Price Range:</label>
-        <input type="range" id="price" min="10" max="500" />
+        <!-- Color -->
+        <label for="color">Color</label>
+        <select id="color" name="color">
+          <option>Black</option>
+          <option>White</option>
+          <option>Gray</option>
+          <option>Beige</option>
+          <option>Red</option>
+        </select>
 
-        <label><input type="checkbox" /> Sale Only</label>
-        <label><input type="checkbox" /> New Releases</label>
+        <!-- Price -->
+        <label for="price">Max Price ($)</label>
+        <input type="number" id="price" name="price" placeholder="250" />
+
+        <!-- Checkboxes -->
+        <label><input type="checkbox" name="saleOnly" /> On Sale</label>
+        <label><input type="checkbox" name="newOnly" /> New Arrivals</label>
+
+        <!-- Button -->
         <button type="submit">Apply Filters</button>
       </form>
     </aside>
@@ -34,8 +60,11 @@
     <!-- Main Content -->
     <main class="product-content">
       <h1>New Arrivals</h1>
-      <!-- Products will be listed here -->
+      <div class="product-listing">
+        <!-- Product cards will go here -->
+      </div>
     </main>
+    
   </div>
 
 </body>
